@@ -12,6 +12,7 @@ doesKeyExist(obj1, 'name'); // => false
 
 function doesKeyExist(obj, key) {
   // Your code here
+  return obj[key] ? true : false;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

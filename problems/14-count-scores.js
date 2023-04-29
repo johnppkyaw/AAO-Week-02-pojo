@@ -28,7 +28,14 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here
+  return people.reduce((scores, person) => {
+    if (scores[person.name]) {
+      scores[person.name] += person.score;
+    } else {
+      scores[person.name] = person.score;
+    }
+    return scores;
+  }, {})
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
